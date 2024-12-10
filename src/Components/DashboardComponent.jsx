@@ -23,24 +23,8 @@ const DashboardComponent = () => {
   const [showAllExpense, setShowAllExpense] = useState(false);
 
   const backEndUrl = import.meta.env.VITE_REACT_APP_BACKEND_API;
-  console.log('backEndUrl dashboard:', backEndUrl);
 
 
-  // useEffect(() => {
-  //   const fetchUserData = async () => {
-  //     try {
-  //       const response = await axios.get(`${backEndUrl}/users/${userId}/budget`);
-  //       setUserData(response.data);
-  //       setUpdatedIncome(response.data);
-  //       console.log('updatedIncome:', response.data);
-  //     } catch (error) {
-  //       console.error("Error fetching user data:", error);
-  //     }
-  //   };
-  
-  //   fetchUserData();
-  // }, [userId, backEndUrl]);
-  
   useEffect(() => {
     const fetchUserData = async () => {
       setLoading(true);
@@ -617,11 +601,6 @@ const createBudget = async (budgetData) => {
 
     </div>
   );
-  
-  
-  
-  
-  
   
   
   
